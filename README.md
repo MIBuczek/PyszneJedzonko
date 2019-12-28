@@ -14,7 +14,7 @@ Main point was done by our Leader / Teacher . We can only use vanila java script
 ##Screen shots
 
 Main page
-![Main page](https://github.com/MIBuczek/PyszneJedzonko/blob/master/main%20page.png)
+![Main page](https://github.com/MIBuczek/PyszneJedzonko/blob/master/main%20website.png)
 
 Login pannel
 ![login pannel](https://github.com/MIBuczek/PyszneJedzonko/blob/master/login%20.png)
