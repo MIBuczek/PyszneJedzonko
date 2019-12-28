@@ -14,13 +14,19 @@ Main point was done by our Leader / Teacher . We can only use vanila java script
 ##Screen shots
 
 Main page
+![Main page](https://github.com/MIBuczek/PyszneJedzonko/blob/master/main%20page.png)
 
 Login pannel
+![login pannel](https://github.com/MIBuczek/PyszneJedzonko/blob/master/login%20.png)
 
-Basic pannel
+Main pannel
+![main pannel](https://github.com/MIBuczek/PyszneJedzonko/blob/master/main%20pannel.png)
 
 Add meal recipe
+![add recipe](https://github.com/MIBuczek/PyszneJedzonko/blob/master/add%20new%20recipe%20pannel.png)
 
-List of done recipe
+Recipe list
+![recipes list](https://github.com/MIBuczek/PyszneJedzonko/blob/master/List%20meal%20recipe.png)
 
 New meal plan
+![new meal plan](https://github.com/MIBuczek/PyszneJedzonko/blob/master/add%20new%20meal%20list.png)
