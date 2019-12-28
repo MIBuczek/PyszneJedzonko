@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Zaplanuj Jedzonko</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+      integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header>
+        <h1>Zaplanuj <span class="jedzonko">Jedzonko</span></h1>
+        <p class="user">Imię</p>
+        <i class="fas fa-user-circle"></i>
+      </header>
+      <nav>
+        <ul class="app_menu">
+          <li class="app_menuItem">
+            <a href="app.html" class="app_menuLink">Pulpit</a>
+          </li>
+          <li class="app_menuItem">
+            <a href="#" class="app_menuLink">Przepisy</a>
+          </li>
+          <li class="app_menuItem">
+            <a href="schedules.html" class="app_menuLink">Plany</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="app_main">
+        <div class="app_pulpit recepies">
+          <div class="table_header">
+            <p>lista przepisów</p>
+            <div id="add_recipe">
+              <i class="far fa-plus-square" id="addRecipe_icon"></i>
+            </div>
+          </div>
+          <div class="table">
+            <table>
+              <thead>
+                <tr class="table_head">
+                  <th>ID</th>
+                  <th>NAZWA</th>
+                  <th>OPIS</th>
+                  <th>AKCJE</th>
+                </tr>
+              </thead>
+              <tbody class="table_recipes"></tbody>
+            </table>
+          </div>
+        </div>
+			<section class="recipe_pannels edit_pannel hidden"> <!-- part of adding new recipe-->
+		        <div class="recipe_pannel-header">
+		          <h2>Nowy przepis</h2>
+				  <button id="save">Zapisz zmiany</button>
+				  <button id="edit" class ="hidden">Zapisz zmiany</button>
+		        </div>
+		        <div class="title_newrecipe">
+		          <form>
+		            <p>Nazwa przepisu</p>
+		            <input
+		              type="text"
+		              name="recipe-title"
+		              placeholder="Name of recipe"
+		            />
+		          </form>
+		          <form>
+		            <p class="special">Opis przepisu</p>
+		            <textarea
+		              name="comment-recipe"
+		              form="usrform"
+		              placeholder="Enter your text hear"
+		            ></textarea>
+		          </form>
+		        </div>
+		        <div class="recipe_panel-add">
+		          <div class="recipe_describe">
+		            <div class="recipe_title">
+		              <p>INSTRUKCJE</p>
+		            </div>
+		            <form class="recipe-forms">
+		              <textarea
+		                name="description-recipe"
+		                id="recipe-input"
+		                name="recipe-title"
+		                placeholder="Description recipe step by step"
+		              ></textarea>
+		              <i id="recipe-btn" class="fas fa-plus-square"></i>
+		            </form>
+		          </div>
+		          <div class="recipe_product">
+		            <div class="recipe_title">
+		              <p>SKŁADNIKI</p>
+		            </div>
+		            <form class="recipe-forms">
+		              <input
+		                type="text"
+		                id="product-input"
+		                name="recipe-title"
+		                placeholder="Necessary product to make recipe"
+		              />
+		              <i id="product-btn" class="fas fa-plus-square"></i>
+		            </form>
+		          </div>
+		        </div>
+		        <div class="recipe_composition">
+		          <div class="recipe_instruction">
+		            <ol id="instruction-list"></ol>
+		          </div>
+		          <div class="recipe_component">
+		            <ul id="component-list"></ul>
+		          </div>
+		        </div>
+          </section>
+	</div>
+	</div>
+    </div>
+    <script src="./js/recipes.js"></script>
+  </body>
+</html>

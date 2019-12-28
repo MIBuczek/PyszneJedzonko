@@ -1,0 +1,271 @@
+.invisible {
+  display: none;
+}
+
+.top_container {
+  display: flex;
+  align-items: row;
+  justify-content: space-between;
+  padding-bottom: 40px;
+
+  #add_recipe,
+  #add_plan {
+    width: 225px;
+    height: 225px;
+    padding: 20px;
+    color: $color-green;
+    font-family: $font-main;
+    font-weight: 600;
+    background-color: $color-white;
+    border: 1px dotted $color-green;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+
+    #addRecipe_icon,
+    #addPlan_icon {
+      font-size: 4em;
+      color: $color-green;
+      cursor: pointer;
+    }
+  }
+
+  .notifications {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 0;
+
+    #info {
+      background-color: $color-white;
+      margin-bottom: 20px;
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+      font-family: $font-main;
+      border: 1px dotted;
+      font-size: 1.2em;
+      color: $color-blue;
+      font-weight: 600;
+    }
+
+    #alert {
+      background-color: $color-white;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      font-family: $font-main;
+      border: 1px dotted;
+      font-size: 1.2em;
+      color: $color-yellow;
+      font-weight: 600;
+    }
+
+    #success {
+      background-color: $color-white;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      font-family: $font-main;
+      border: 1px dotted;
+      font-size: 1.2em;
+      margin-bottom: 0;
+      color: $color-green;
+      font-weight: 600;
+    }
+
+    #info_icon {
+      font-size: 1.8em;
+    }
+
+    #alert_icon {
+      font-size: 1.8em;
+    }
+
+    #success_icon {
+      font-size: 1.8em;
+    }
+
+    #info_icon,
+    #alert_icon,
+    #success_icon {
+      padding: 10px;
+    }
+
+    #close_icon {
+      font-size: 1em;
+      align-self: flex-start;
+      margin-left: auto;
+      padding: 5px;
+      cursor: pointer;
+    }
+  }
+}
+.weekly_plan {
+  background-color: $color-white;
+  border: 1px dashed $color-lgray;
+  padding: 0.5rem;
+  font-family: $font-main;
+  p {
+    text-align: center;
+    color: $color-orange;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin: 1rem auto;
+  }
+  .prev_next {
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0.5rem;
+    a {
+      color: $color-orange;
+      font-size: 0.9rem;
+    }
+  }
+}
+.wrapper_grid {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  .day {
+    padding: 0.5rem;
+    border-top: 1px solid $color-lgray;
+    text-align: center;
+    font-size: 1.5rem;
+    color: $color-dgray;
+    font-weight: 700;
+  }
+  div.meal {
+    border-top: 1px solid $color-lgray;
+    color: $color-lgray;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 0.5rem;
+  }
+  .meal:last-of-type {
+    border-bottom: 1px solid $color-lgray;
+  }
+}
+
+@for $i from 1 through 7 {
+  .col-#{$i} {
+    width: (100%/7) * $i;
+  }
+}
+//wyświetlanie przepisów
+
+.recepies {
+  padding: 40px 60px;
+  .table_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid $color-lgray;
+    p {
+      color: $color-orange;
+      text-align: left;
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    div i {
+      width: 2rem;
+      height: 2rem;
+      font-size: 2em;
+      color: $color-green;
+      cursor: pointer;
+    }
+  }
+
+  table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+    tbody {
+      width: 100%;
+      display: block;
+      max-height: 400px;
+      overflow-y: scroll;
+      table-layout: fixed;
+    }
+    thead {
+      width: 100%;
+      border-bottom: 1px solid $color-lgray;
+      text-align: left;
+      display: table;
+    }
+    tr,
+    td {
+      padding: 0.5rem;
+      border-top: 1px solid $color-lgray;
+      vertical-align: top;
+    }
+    tr.table_head {
+      font-weight: 700;
+      color: $color-dgray;
+      font-size: 1.2rem;
+      th {
+        width: 510px;
+        text-align: center;
+        &:last-of-type,
+        &:first-of-type {
+          width: 144px;
+        }
+      }
+    }
+    tr.new_recepie {
+      color: $color-lgray;
+      &:first-child,
+      td {
+        border: none;
+      }
+    }
+    td.buttons {
+      display: flex;
+      justify-content: space-between;
+      .edit_recipe,
+      .delete_recipe {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+      }
+      .edit_recipe {
+        background: url(../img/edit-regular-orange.svg) no-repeat;
+        border: none;
+        margin: 0 5px;
+      }
+      .delete_recipe {
+        background: url(../img/trash-alt-regular-red.svg) no-repeat;
+        border: none;
+      }
+    }
+  }
+}
+.table_recipes {
+  width: 100%;
+  .recipe_id {
+    width: 10%;
+  }
+  td {
+    width: 510px;
+  }
+  .buttons {
+    width: 144px;
+  }
+}
+
+.orange_arrow {
+  color: $color-jedzonko;
+  font-weight: 700;
+  position: absolute;
+  right: 10px;
+  top: 12px;
+}
+
+//niech to będzie na końcu :D póki co nie mam lepszego rozwiązania/ mf
+.closeItem {
+  display: none;
+}

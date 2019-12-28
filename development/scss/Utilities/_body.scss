@@ -1,0 +1,37 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  background-color: $color-bg;
+  user-select: none;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.btn {
+    border:none;
+    cursor: pointer;
+    color: $color-white;
+    font-family: $font-main;
+    font-weight: 700;
+    background-color: $color-orange;
+    padding: 1rem;
+    height: 3rem;
+    width: 170px;
+}
+

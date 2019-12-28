@@ -1,0 +1,53 @@
+.planList {
+    width: 95%;
+    margin: 30px auto;
+    text-align: left;
+    .lp_header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid $color-lgray;
+        padding: 8px 0;
+        margin-bottom: 15px;
+        .lp_title {
+            text-transform: uppercase;
+            font-size: 24px;
+            font-weight: 700;
+            color: $color-jedzonko;
+        }
+        .fa-plus-square {
+            font-size: 34px;
+            color: #468966;
+            cursor: pointer;
+        }
+    }
+    .lp_info {
+        text-align: center;
+        font-size: 28px;
+        font-weight: 700;
+        color: rgba(0,0,0,0.5);
+        margin-top: 50px;
+    }
+    .tabel_list {
+        text-align: left;
+        width: 100%;
+        td, th {
+            border-bottom: 1px solid $color-lgray;
+            min-width: 75px;
+            padding: 2px 4px;
+            color: rgba(0,0,0,0.7);
+        }
+        .fa-edit {
+            font-size: 18px;
+            padding: 1px;
+            color: $color-yellow;
+            cursor: pointer;
+        }
+        .fa-trash-alt {
+            font-size: 18px;
+            padding: 1px;
+            color: $color-red;
+            cursor: pointer;
+        }
+    }
+}

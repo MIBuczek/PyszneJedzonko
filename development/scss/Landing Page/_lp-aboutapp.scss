@@ -1,0 +1,32 @@
+.boxes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.box {
+  font-family: $font-main;
+  display: flex;
+  max-width: 25%;
+  min-height: 620px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: $color-gray;
+  h3 {
+    font-size: 2rem;
+    font-weight: lighter;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+  }
+  p {
+    font-size: 1.55rem;
+    line-height: 1.2;
+  }
+}
+#icon::before {
+  font-size: 6rem;
+  margin-bottom: 0.5rem;
+}

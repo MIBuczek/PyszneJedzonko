@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Zaplanuj Jedzonko</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+
+  <body>
+    <main class="app">
+      
+      <header> <!-- NAGŁÓWEK -->
+        <h1>Zaplanuj <span class="jedzonko">Jedzonko</span></h1>
+        <p class="user">Imię</p>
+        <i class="fas fa-user-circle"></i>
+      </header>
+      
+      <nav> <!-- MENU BOCZNE -->
+        <ul class="app_menu">
+          <li class="app_menuItem"><a href="app.html" class="app_menuLink">Pulpit</a></li>
+          <li class="app_menuItem"><a href="recipes.html" class="app_menuLink">Przepisy</a></li>
+          <li class="app_menuItem"><a href="schedules.html" class="app_menuLink">Plany</a></li>
+        </ul>
+      </nav>
+
+      <div class="app_main"> <!-- PULPIT APLIACJI -->
+         <div class="app_pulpit">  <!--białe tło - w nim dodajemy całą zawartość-->
+
+          <div class="app_welcome"> <!-- EKRAN POWITALNY - PRZED WPISANIEM IMIENIA -->
+            <h3>Witaj,</h3>
+            <p class="apw_p">wygląda na to że jesteś tutaj<br> pierwszy raz! </p>
+            <input type="text" placeholder="tutaj wpisz jak masz na imię" class="input_name"><br>
+            <a href="#" class="app_btn">Gotowe!</a>
+            <p class="apw_p">Podaj nam swoje imię, a my zorganizujemy<br> dla Ciebie naszą aplikację :)</p>
+          </div>          
+          
+          <div class="top_container display"> <!-- PULPIT GŁÓWNY -->
+              <div id="add_recipe"><i class="far fa-plus-square" id="addRecipe_icon"></i>dodaj przepis</div>
+              <div id="add_plan"><i class="far fa-plus-square" id="addPlan_icon"></i>dodaj plan</div>
+              <div class="notifications">
+                <div id="info"><i class="fas fa-info-circle" id="info_icon"></i>Masz już 99 przepisów, nieźle!<i class="fas fa-window-close" id="close_icon"></i></div>
+                <div id="alert"><i class="fas fa-exclamation-circle" id="alert_icon"></i>Pamiętaj, aby dodać plan!<i class="fas fa-window-close" id="close_icon"></i></div>
+                <div id="success"><i class="fas fa-check-circle" id="success_icon"></i>Świetnie, że jesteś! Udanego planowania i smacznego! :)<i class="fas fa-window-close" id="close_icon"></i></div>
+              </div>
+            </div>            
+            
+            <div class="new_plan invisible"> <!-- EKRAN DODAWANIA NOWEGO PLANU -->
+              <div class="np_header">
+                <p class="np_title">Nowy plan</p>
+                <a href="#" class="np_btn">Zapisz i zamknij</a>
+              </div>
+              <form>
+                <label for="plan">Nazwa planu</label>
+                <input type="text" id="plan"><br>
+                <label for="plan_description">Opis planu</label>
+                <textarea name="plan_description" id ="plan_description" rows="4"></textarea><br>
+                <label for="week">Numer tygodnia</label>
+                <input type="number" id="week"><br>
+              </form>
+              <table class="tabel_new" cellspacing="0">
+                <tr>
+                    <th></th>
+                    <th scope="col">Śniadanie</th>
+                    <th scope="col">Drugie śniadanie</th>
+                    <th scope="col">Zupa</th>
+                    <th scope="col">Drugie danie</th>
+                    <th scope="col">Kolacja</th>
+                  </tr>
+                  <tr class="new_monday">
+                      <th scope="row">Poniedziałek</th>
+                      <td>
+                          <select name="przepis">
+                          <option>Tu wpisz pierwszą możliwość</option>
+                          <option>Tu wpisz drugą możliwość</option>
+                        </select>
+                      </td>
+                      <td>
+                        <select name="przepis">
+                        <option>Tu wpisz pierwszą możliwość</option>
+                        <option>Tu wpisz drugą możliwość</option>
+                        </select>
+                      </td>
+                      <td>
+                        <select name="przepis">
+                        <option>Tu wpisz pierwszą możliwość</option>
+                        <option>Tu wpisz drugą możliwość</option>
+                        </select>
+                      </td>
+                      <td>
+                        <select name="przepis">
+                        <option>Tu wpisz pierwszą możliwość</option>
+                        <option>Tu wpisz drugą możliwość</option>
+                        </select>
+                      </td>
+                      <td>
+                        <select name="przepis">
+                        <option>Tu wpisz pierwszą możliwość</option>
+                        <option>Tu wpisz drugą możliwość</option>
+                        </select>
+                      </td>
+                  </tr>
+                  <tr class="new_tuesday">
+                      <th scope="row">Wtorek</th>
+                      <td>
+                        <select name="przepis">
+                        <option>Tu wpisz pierwszą możliwość</option>
+                        <option>Tu wpisz drugą możliwość</option>
+                        </select>
+                      </td>
+                      <td>
+                        <select name="przepis">
+                        <option>Tu wpisz pierwszą możliwość</option>
+                        <option>Tu wpisz drugą możliwość</option>
+                        </select>
+                      </td>
+                      <td>
+                        <select name="przepis">
+                        <option>Tu wpisz pierwszą możliwość</option>
+                        <option>Tu wpisz drugą możliwość</option>
+                        </select>
+                      </td>
+                      <td>
+                        <select name="przepis">
+                        <option>Tu wpisz pierwszą możliwość</option>
+                        <option>Tu wpisz drugą możliwość</option>
+                        </select>
+                      </td>
+                      <td>
+                        <select name="przepis">
+                        <option>Tu wpisz pierwszą możliwość</option>
+                        <option>Tu wpisz drugą możliwość</option>
+                        </select>
+                      </td>
+                  </tr>
+                  <tr class="new_wednesday">
+                      <th scope="row">Środa</th>
+                      <td>
+                        <select name="przepis">
+                        <option>Tu wpisz pierwszą możliwość</option>
+                        <option>Tu wpisz drugą możliwość</option>
+                        </select>
+                      </td>
+                      <td>
+                        <select name="przepis">
+                        <option>Tu wpisz pierwszą możliwość</option>
+                        <option>Tu wpisz drugą możliwość</option>
+                        </select>
+                      </td>
+                      <td>
+                        <select name="przepis">
+                        <option>Tu wpisz pierwszą możliwość</option>
+                        <option>Tu wpisz drugą możliwość</option>
+                        </select>
+                      </td>
+                      <td>
+                        <select name="przepis">
+                        <option>Tu wpisz pierwszą możliwość</option>
+                        <option>Tu wpisz drugą możliwość</option>
+                        </select>
+                      </td>
+                      <td>
+                        <select name="przepis">
+                        <option>Tu wpisz pierwszą możliwość</option>
+                        <option>Tu wpisz drugą możliwość</option>
+                        </select>
+                      </td>
+                  </tr>
+                  <tr class="new_thursday">
+                      <th scope="row">Czwartek</th>
+                      <td>
+                        <select name="przepis">
+                        <option>Tu wpisz pierwszą możliwość</option>
+                        <option>Tu wpisz drugą możliwość</option>
+                        </select>
+                      </td>
+                      <td>
+                        <select name="przepis">
+                        <option>Tu wpisz pierwszą możliwość</option>
+                        <option>Tu wpisz drugą możliwość</option>
+                        </select>
+                      </td>
+                      <td>
+                        <select name="przepis">
+                        <option>Tu wpisz pierwszą możliwość</option>
+                        <option>Tu wpisz drugą możliwość</option>
+                        </select>
+                      </td>
+                      <td>
+                        <select name="przepis">
+                        <option>Tu wpisz pierwszą możliwość</option>
+                        <option>Tu wpisz drugą możliwość</option>
+                        </select>
+                      </td>
+                      <td>
+                        <select name="przepis">
+                        <option>Tu wpisz pierwszą możliwość</option>
+                        <option>Tu wpisz drugą możliwość</option>
+                        </select>
+                      </td>
+                  </tr>
+                  <tr class="new_friday">
+                      <th scope="row">Piątek</th>
+                      <td>
+                        <select name="przepis">
+                        <option>Tu wpisz pierwszą możliwość</option>
+                        <option>Tu wpisz drugą możliwość</option>
+                        </select>
+                      </td>
+                      <td>
+                        <select name="przepis">
+                        <option>Tu wpisz pierwszą możliwość</option>
+                        <option>Tu wpisz drugą możliwość</option>
+                        </select>
+                      </td>
+                      <td>
+                        <select name="przepis">
+                        <option>Tu wpisz pierwszą możliwość</option>
+                        <option>Tu wpisz drugą możliwość</option>
+                        </select>
+                      </td>
+                      <td>
+                        <select name="przepis">
+                        <option>Tu wpisz pierwszą możliwość</option>
+                        <option>Tu wpisz drugą możliwość</option>
+                        </select>
+                      </td>
+                      <td>
+                        <select name="przepis">
+                        <option>Tu wpisz pierwszą możliwość</option>
+                        <option>Tu wpisz drugą możliwość</option>
+                        </select>
+                      </td>
+                  </tr>
+                  <tr class="new_saturday">
+                      <th scope="row">Sobota</th>
+                      <td>
+                        <select name="przepis">
+                        <option>Tu wpisz pierwszą możliwość</option>
+                        <option>Tu wpisz drugą możliwość</option>
+                        </select>
+                      </td>
+                      <td>
+                        <select name="przepis">
+                        <option>Tu wpisz pierwszą możliwość</option>
+                        <option>Tu wpisz drugą możliwość</option>
+                        </select>
+                      </td>
+                      <td>
+                        <select name="przepis">
+                        <option>Tu wpisz pierwszą możliwość</option>
+                        <option>Tu wpisz drugą możliwość</option>
+                        </select>
+                      </td>
+                      <td>
+                        <select name="przepis">
+                        <option>Tu wpisz pierwszą możliwość</option>
+                        <option>Tu wpisz drugą możliwość</option>
+                        </select>
+                      </td>
+                      <td>
+                        <select name="przepis">
+                        <option>Tu wpisz pierwszą możliwość</option>
+                        <option>Tu wpisz drugą możliwość</option>
+                        </select>
+                      </td>
+                  </tr>
+                  <tr class="new_sunday">
+                      <th scope="row">Niedziela</th>
+                      <td>
+                        <select name="przepis">
+                        <option>Tu wpisz pierwszą możliwość</option>
+                        <option>Tu wpisz drugą możliwość</option>
+                        </select>
+                      </td>
+                      <td>
+                        <select name="przepis">
+                        <option>Tu wpisz pierwszą możliwość</option>
+                        <option>Tu wpisz drugą możliwość</option>
+                        </select>
+                      </td>
+                      <td>
+                        <select name="przepis">
+                        <option>Tu wpisz pierwszą możliwość</option>
+                        <option>Tu wpisz drugą możliwość</option>
+                        </select>
+                      </td>
+                      <td>
+                        <select name="przepis">
+                        <option>Tu wpisz pierwszą możliwość</option>
+                        <option>Tu wpisz drugą możliwość</option>
+                        </select>
+                      </td>
+                      <td>
+                        <select name="przepis">
+                        <option>Tu wpisz pierwszą możliwość</option>
+                        <option>Tu wpisz drugą możliwość</option>
+                        </select>
+                      </td>
+                  </tr>
+            </table>
+            </div>
+
+          <section class="recipe_pannels hidden"> <!-- part of adding new recipe-->
+            <div class="recipe_pannel-header">
+              <h2>Nowy przepis</h2>
+              <button id="save">Zapisz zmiany</button>
+            </div>
+            <div class="title_newrecipe">
+              <form>
+                <p>Nazwa przepisu</p>
+                <input
+                  type="text"
+                  name="recipe-title"
+                  placeholder="Name of recipe"
+                />
+              </form>
+              <form>
+                <p class="special">Opis przepisu</p>
+                <textarea
+                  name="comment-recipe"
+                  form="usrform"
+                  placeholder="Enter your text hear"
+                ></textarea>
+              </form>
+            </div>
+            <div class="recipe_panel-add">
+              <div class="recipe_describe">
+                <div class="recipe_title">
+                  <p>INSTRUKCJE</p>
+                </div>
+                <form class="recipe-forms">
+                  <textarea
+                    name="description-recipe"
+                    id="recipe-input"
+                    name="recipe-title"
+                    placeholder="Description recipe step by step"
+                  ></textarea>
+                  <i id="recipe-btn" class="fas fa-plus-square"></i>
+                </form>
+              </div>
+              <div class="recipe_product">
+                <div class="recipe_title">
+                  <p>SKŁADNIKI</p>
+                </div>
+                <form class="recipe-forms">
+                  <input
+                    type="text"
+                    id="product-input"
+                    name="recipe-title"
+                    placeholder="Necessary product to make recipe"
+                  />
+                  <i id="product-btn" class="fas fa-plus-square"></i>
+                </form>
+              </div>
+            </div>
+            <div class="recipe_composition">
+              <div class="recipe_instruction">
+                <ol id="instruction-list"></ol>
+              </div>
+              <div class="recipe_component">
+                <ul id="component-list"></ul>
+              </div>
+            </div>
+          </section>        
+          
+          <div class="weekly_plan display"> <!-- part of adding weekly plan-->
+          <p>Twój plan na {nr_tygodnia} tydzień:</p>
+          <div class="wrapper_grid">
+            <div class="col-1">
+              <div class="day">Poniedziałek</div>
+              <div class="meal">Śniadanie</div>
+              <div class="meal">Drugie śniadanie</div>
+              <div class="meal">Zupa</div>
+              <div class="meal">Drugie danie</div>
+              <div class="meal">Kolacja</div>
+            </div>
+            <div class="col-1">
+              <div class="day">Wtorek</div>
+              <div class="meal">Śniadanie</div>
+              <div class="meal">Drugie śniadanie</div>
+              <div class="meal">Zupa</div>
+              <div class="meal">Drugie danie</div>
+              <div class="meal">Kolacja</div>
+            </div>
+            <div class="col-1">
+              <div class="day">Środa</div>
+              <div class="meal">Śniadanie</div>
+              <div class="meal">Drugie śniadanie</div>
+              <div class="meal">Zupa</div>
+              <div class="meal">Drugie danie</div>
+              <div class="meal">Kolacja</div>
+            </div>
+            <div class="col-1">
+              <div class="day">Czwartek</div>
+              <div class="meal">Śniadanie</div>
+              <div class="meal">Drugie śniadanie</div>
+              <div class="meal">Zupa</div>
+              <div class="meal">Drugie danie</div>
+              <div class="meal">Kolacja</div>
+            </div>
+            <div class="col-1">
+              <div class="day">Piątek</div>
+              <div class="meal">Śniadanie</div>
+              <div class="meal">Drugie śniadanie</div>
+              <div class="meal">Zupa</div>
+              <div class="meal">Drugie danie</div>
+              <div class="meal">Kolacja</div>
+            </div>
+            <div class="col-1">
+              <div class="day">Sobota</div>
+              <div class="meal">Śniadanie</div>
+              <div class="meal">Drugie śniadanie</div>
+              <div class="meal">Zupa</div>
+              <div class="meal">Drugie danie</div>
+              <div class="meal">Kolacja</div>
+            </div>
+            <div class="col-1">
+              <div class="day">Niedziela</div>
+              <div class="meal">Śniadanie</div>
+              <div class="meal">Drugie śniadanie</div>
+              <div class="meal">Zupa</div>
+              <div class="meal">Drugie danie</div>
+              <div class="meal">Kolacja</div>
+            </div>
+          </div>
+          <div class="prev_next">
+            <a href="#">&laquo poprzedni</a>
+            <a href="#">następny &raquo</a>
+          </div>
+      </div>
+
+      </div> <!-- ZAMKNIECIE KLASY APP_MAIN -->
+    </main>
+    <script src="./js/app.js"></script>
+  </body>
+</html>

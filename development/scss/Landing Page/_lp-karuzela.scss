@@ -1,0 +1,38 @@
+.carousel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+    font-family: $font-main;
+    height: 475px;
+
+    #prev, #next {
+        font-size: 2.5em;
+        cursor: pointer;
+    }
+    
+    h3 {
+        font-size: 2.8em;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    p {
+        font-size: 1.5em;
+        padding: 10px 0;
+        text-align: center;
+        width: 700px;
+    }
+
+    .slider {
+        list-style: none;
+    }
+    
+     .slider .slider_item {
+         display: none;
+    }
+    
+    .slider .visible {
+        display: inline-block;
+    }
+}

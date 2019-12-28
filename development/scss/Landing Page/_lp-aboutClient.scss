@@ -1,0 +1,31 @@
+.about-client {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: $color-dgray;
+  .photo-client {
+    width: 30%;
+    min-height: 320px;
+    background: $color-gray;
+    margin-left: 30px;
+  }
+  .info-client {
+    width: 65%;
+    height: 50%;
+    padding-left: 120px;
+  }
+  h3 {
+    font-size: 2.5rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+  p {
+    width: 90%;
+    height: auto;
+    font-size: 1.55rem;
+  }
+}
+
+

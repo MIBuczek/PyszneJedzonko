@@ -1,0 +1,40 @@
+.app_main {
+    padding: 40px 60px;
+    .app_pulpit {
+        background-color: $color-white;
+        border: 1px dashed rgba(0,0,0,0.5);
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        h3 {
+            font-size: 36px;
+            color: rgba(0,0,0,0.7);
+            margin-top: 150px;
+        }
+        .apw_p {
+            font-size: 24px;
+            font-weight: 700;
+            color: rgba(0,0,0,0.7);
+            margin: 20px 0;
+        }
+        .app_btn {
+            margin-top: 20px;
+            display: inline-block;
+            padding: 10px 30px;
+            background-color: $color-jedzonko;
+            color: $color-white;
+            font-weight: 700;
+            font-size: 20px;
+            border-radius: 6px;
+            transition: 0.5s;
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+        .input_name {
+            width: 300px;
+            font-size: 16px;
+            padding: 4px 6px;
+        }
+    }
+}
